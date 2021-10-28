@@ -19,6 +19,7 @@ class Chess_Board:
         board_x[7][0] = 'R'
         return board_x
 
+    
 class WHITE_KING(Chess_Board):
     def __init__(self):
         Chess_Board.__init__(self)
@@ -51,7 +52,6 @@ class WHITE_KING(Chess_Board):
 
             except:
                 pass
-
 
 class WHITE_QUEEN(Chess_Board):
     def __init__(self):
@@ -152,7 +152,6 @@ class WHITE_BISHOP(Chess_Board):
 
             except:
                 pass
-
 class WHITE_KNIGHT(Chess_Board):
     def __init__(self):
         Chess_Board.__init__(self)
@@ -187,7 +186,6 @@ class WHITE_KNIGHT(Chess_Board):
                 pass
 
 class Engine(Chess_Board):
-
     def __init__(self):
         WHITE_KING.__init__(self)
         WHITE_QUEEN.__init__(self)
@@ -220,13 +218,11 @@ class Engine(Chess_Board):
             else:
                 print ('please choose again')
 
-
     def display(self):
         for i in range (8):
             for j in range (8):
                 print (self.board[i][j], end=' ')
             print ()
-
 
     c_engine = Engine()
     c_engine.display()
